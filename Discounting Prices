@@ -25,5 +25,8 @@ public class Main
 		    double Discount= (n*7.5)/100;
 		    double Price= n-Discount;
 		    System.out.println("Final Price" + Price);
-	}
+		} else{
+		     System.out.println("Final Price" + n);
+		}
+	} 
 }
