@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter price");
+		double n = sc.nextDouble();
+		
+		
+		if(n<2000 && n>=1000){
+		    System.out.println("Discount: 2.5%");
+		    double Discount= (n*2.5)/100;
+		    double Price= n-Discount;
+		    System.out.println("Final Price: " + Price);
+		} else if(n>=2000 && n<3000){
+		    System.out.println("Discount: 5%");
+		    double Discount= (n*5)/100;
+		    double Price= n-Discount;
+		    System.out.println("Final Price" + Price);
+		} else if(n<1000){
+		    System.out.println("No Discount");
+		} else if(n>=3000 && n<4000){
+		    System.out.println("Discount: 7.5%");
+		    double Discount= (n*7.5)/100;
+		    double Price= n-Discount;
+		    System.out.println("Final Price" + Price);
+	}
+}
