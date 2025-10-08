@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Main{
+    public int factorial(int num){
+        int fact = 1;
+            for(int i =1; i<=num;i++){
+                fact*=i;
+            }
+            return fact;
+    } 
+    
+    public static void main(String[] args){
+        
+    Scanner sc = new Scanner(System.in);
+    Main m = new Main(); 
+    System.out.println("enter n");
+    int n = sc.nextInt();
+    
+    System.out.println("enter r");
+    int r = sc.nextInt();
+    
+    int result = m.factorial(n);
+    int r1 = m.factorial(r);
+    int r2 = m.factorial(n-r);
+    
+    int ans = result/(result1 * r2);
+    System.out.println("answer of nCr is: " + ans);
+    }
+}
