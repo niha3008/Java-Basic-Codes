@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main {
+
+    public int max(int a, int b, int c) {
+        return Math.max(a, Math.max(b,c));
+    }
+
+    public int min(int a, int b, int c) {
+        return Math.min(a, Math.min(b,c));
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Main m = new Main(); 
+
+        System.out.println("enter 3 numbers:");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+
+        System.out.println("max is: " + m.max(a,b,c));
+        System.out.println("min is: " + m.min(a,b,c));
+    }
+}
