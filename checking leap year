@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Main {
+    public boolean leap(int a) {
+        if (((a % 4 == 0)&& (a%100 != 0))||((a%100==0)&&(a%400==0))) {
+            return true; 
+        }
+        else {
+            return false; 
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Main m = new Main(); 
+
+        System.out.println("Enter year:");
+        int a = sc.nextInt();
+        
+        if (m.leap(a)) {
+            System.out.println(a + " is a leap year");
+        } else {
+            System.out.println(a + " is not a leap year");
+        }
+    }
+}
