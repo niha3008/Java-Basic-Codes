@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Main {
+
+    public double area(double r) {
+        double area = 3.14 * r * r;
+        return area;
+    }
+
+    public double circumference(double r) {
+        double circumference = 2 * 3.14 * r;
+        return circumference;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Main m = new Main(); 
+
+        System.out.println("enter radius:");
+        double r = sc.nextDouble();
+
+        double area = m.area(r);
+        double circumference = m.circumference(r);
+
+        System.out.println("area of given circle is: " + area);
+        System.out.println("circumference of given circle is: " + circumference);
+    }
+}
