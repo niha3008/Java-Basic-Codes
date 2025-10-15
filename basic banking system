@@ -1,0 +1,68 @@
+import java.util.*;
+
+class BankingSystem {
+     String name;
+     int Accno;
+     int balance;
+    
+    BankingSystem(String name, int Accno, int balance){
+        this.name=name;
+        this.Accno=Accno;
+        this.balance=balance;
+    }
+    
+    void deposit(int money){
+        balance = balance+money;
+        System.out.println("deposited" + money);
+    }
+    
+    void withdraw(int money){
+        if(money>balance){
+            System.out.println("insufficient balance");
+        } else {
+            balance = balance-money;
+            System.out.println("withdrawn" + money);
+        }
+    }
+    
+    void CheckBal(){
+        System.out.println("Current balance" + balance);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter name:");
+        String name = sc.nextLine();
+        System.out.print("enter account name:");
+        int Accno = sc.nextInt();
+        System.out.println("enter initial balance:");
+        int balance = sc.nextInt();
+        BankingSystem b = new BankingSystem(name,Accno,balance);
+        
+        int choice;
+        while(true){
+            System.out.println("MENU: 1.Deposit 2.Withdraw 3.Check Balance 4.Invalid");
+            choice=sc.nextInt();
+            switch(choice){
+                case 1:
+                    System.out.println("enter deposit amount");
+                    int depos = sc.nextInt();
+                    b.deposit(depos);
+                    break;
+                case 2:
+                    System.out.println("enter withdraw amount");
+                    int w = sc.nextInt();
+                    b.withdraw(w);
+                    break;
+                case 3:
+                    b.CheckBal();
+                    break;
+                case 4:
+                    System.out.println("invalid");
+                    return;
+            }
+        }
+        
+    }
+}
